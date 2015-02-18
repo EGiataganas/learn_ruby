@@ -17,3 +17,7 @@ end
 def multiply(*nums)
   nums.inject {|product, n| product * n}
 end
+
+def power(a,b)
+  a**b
+end

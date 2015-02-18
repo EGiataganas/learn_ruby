@@ -14,6 +14,6 @@ def sum(arr)
   end
 end
 
-def multiply(a,b)
-  a*b
+def multiply(*nums)
+  nums.inject {|product, n| product * n}
 end

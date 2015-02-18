@@ -79,7 +79,9 @@ end
 
 describe "#multiply" do
 
-  it "multiplies two numbers"
+  it "multiplies two numbers" do 
+    multiply(2,5).should == 10
+  end
 
   it "multiplies several numbers"
 

@@ -21,3 +21,7 @@ end
 def power(a,b)
   a**b
 end
+
+def factorial(a)
+  0
+end

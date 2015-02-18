@@ -7,5 +7,9 @@ def subtract(a,b)
 end
 
 def sum(arr)
-  0
+  if arr.empty?
+    return 0
+  else
+    arr.inject{|sum,num| sum+num}
+  end
 end

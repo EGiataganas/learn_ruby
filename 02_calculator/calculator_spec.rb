@@ -83,7 +83,9 @@ describe "#multiply" do
     multiply(2,5).should == 10
   end
 
-  it "multiplies several numbers"
+  it "multiplies several numbers" do
+    multiply(2,2,3).should == 12
+  end
 
 end
 

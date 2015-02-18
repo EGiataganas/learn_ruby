@@ -13,3 +13,7 @@ def sum(arr)
     arr.inject{|sum,num| sum+num}
   end
 end
+
+def multiply(a,b)
+  a*b
+end

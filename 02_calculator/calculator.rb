@@ -22,6 +22,10 @@ def power(a,b)
   a**b
 end
 
-def factorial(a)
-  0
+def factorial(num)
+  if num==0
+    return 0
+  else
+    (1..num).inject(1) {|product,n| product*n}
+  end
 end

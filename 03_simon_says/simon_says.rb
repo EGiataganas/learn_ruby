@@ -18,3 +18,7 @@ def first_word(word)
   arr = word.split
   return arr[0]
 end
+
+def titleize(word)
+  word.capitalize!
+end

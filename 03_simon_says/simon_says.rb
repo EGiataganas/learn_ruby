@@ -1,30 +1,25 @@
 def echo(word)
-  return word
+  word
 end
 
 def shout(word)
-  return word.upcase!
+  word.upcase!
 end
 
-def repeat(word, n=2)
-  ((word + " ") * n).strip
+def repeat(word, times_to_repeat=2)
+  Array.new(times_to_repeat, word).join(' ')
 end
 
-def start_of_word(word,n)
-  word[0..(n-1)]
+def start_of_word(word, char_count)
+  word[0..( char_count.pred )]
 end
 
 def first_word(word)
-  arr = word.split
-  return arr[0]
+  word.split.first
 end
 
 def titleize(sentence)
-  lower_case_words = %w{ and over the }
-  words = sentence.split
-  words.each do |word|
-    word.capitalize! unless lower_case_words.include?(word)
-  end
-  words.first.capitalize!
-  words.join(" ")
+  sentence.split.each_with_index do |word, index|
+    word.capitalize! unless word.match(/(and|over|the)/) && !index.zero?
+  end.join(' ')
 end

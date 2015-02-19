@@ -20,5 +20,9 @@ def first_word(word)
 end
 
 def titleize(word)
-  word.capitalize!
+  sentence = word.split
+  for i in sentence
+    i.capitalize!
+  end
+  sentence.join(" ")
 end

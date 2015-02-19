@@ -22,7 +22,10 @@ end
 def titleize(word)
   sentence = word.split
   for i in sentence
-    i.capitalize!
+    if i != "and" && i != "over" && i != "the"
+      i.capitalize!
+    end
+    sentence[0].capitalize!
   end
   sentence.join(" ")
 end

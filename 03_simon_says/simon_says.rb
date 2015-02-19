@@ -6,6 +6,6 @@ def shout(word)
   return word.upcase!
 end
 
-def repeat(word)
-  ((word + " ") * 2).strip
+def repeat(word, n=2)
+  ((word + " ") * n).strip
 end

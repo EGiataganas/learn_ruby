@@ -19,13 +19,12 @@ def first_word(word)
   return arr[0]
 end
 
-def titleize(word)
-  sentence = word.split
-  for i in sentence
-    if i != "and" && i != "over" && i != "the"
-      i.capitalize!
-    end
-    sentence[0].capitalize!
+def titleize(sentence)
+  lower_case_words = %w{ and over the }
+  words = sentence.split
+  words.each do |word|
+    word.capitalize! unless lower_case_words.include?(word)
   end
-  sentence.join(" ")
+  words.first.capitalize!
+  words.join(" ")
 end
